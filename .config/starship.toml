@@ -1,0 +1,58 @@
+# Get editor completions based on the config schema
+# https://starship.rs/config/
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$directory$python$git_branch$git_status$fill$time$cmd_duration$hostname
+$shell$character"""
+
+[directory]
+style = "bold #c9a8fa"
+
+[hostname]
+format = "[$ssh_symbol$hostname]($style)"
+ssh_only = true
+style = "cyan"
+
+[git_branch]
+style = "cyan"
+
+[git_status]
+format = '([$all_status]($style) )'
+up_to_date = "[✓](bold green)"
+
+[fill]
+symbol = " "
+
+[cmd_duration]
+format = "[ for ](bright-white)[$duration]($style)"
+style = "yellow"
+disabled = false
+
+[time]
+format = "[$time]($style)"
+style = "cyan"
+time_format = "%R"
+disabled = false
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+version_format = 'v${major}.${minor}'
+python_binary = ['python', 'python3', 'python2']
+disabled = false
+
+[shell]
+format = "([$indicator]($style)  )"
+powershell_indicator = ""
+zsh_indicator = ""
+style = '#c9a8fa'
+disabled = false
+
+[character]
+format = "$symbol "
+success_symbol = "[](bold green)"
+error_symbol = "[](bold red)"
+vimcmd_symbol = "[](bold #7e9cd8)"
+vimcmd_replace_one_symbol = "[](bold #e46876)"
+vimcmd_replace_symbol = "[](bold #e46876)"
+vimcmd_visual_symbol = "[](bold #ffa066)"

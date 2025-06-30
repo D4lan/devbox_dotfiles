@@ -1,0 +1,27 @@
+.DS_Store
+Archive.zip
+my.session
+ai_output.txt
+ai_output.md
+ai_output.docx
+**/auth/*
+**/venv/
+**/.venv/
+**/testing/*
+**/specs/*
+.aider*
+.env
+
+# Terraform files and directories
+secret.auto.tfvars
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+.terraformrc
+terraform.rc
+*_override.tf
+.local-state
+
+# Crash log files
+crash.log
+crash.*.log
